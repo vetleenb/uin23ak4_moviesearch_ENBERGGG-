@@ -4,19 +4,19 @@ import { useState } from 'react';
 export const MovieCard = ({setSearchTerm}) => {
     const [input, setInput] = useState("");
 
-    function fetchData(value) {
+    function MyData(value) {
         fetch("https://api.themoviedb.org/3/movie/550?api_key=5084a026c624f937a52cc5a4c3fc3df9").then((response) => response.json())
             .then((json) => {
-                const searchTerm = json.filter((user) => {
-                    return (value && user && user.title && user.title.toLowerCase().includes(value)
+                const searchTerm = json.filter((movie) => {
+                    return (value && movie && movie.title && movie.title.toLowerCase().includes(value)
                     );
                 });
                 setSearchTerm(searchTerm);
             });
     }
-    const handleChange = (value) => {
+    const Change = (value) => {
         setInput(value);
-        fetchData(value);
+        MyData(value);
     };
 
 
