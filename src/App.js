@@ -1,23 +1,24 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import './App.css';
-import SearchResult from'./Components/SearchResults';
-import SearchBar from './Components/SearchBar';
+import MovieCard from './Components/MovieCard';
+import SearchhResults  from './Components/SearchhResults';
 
 
-function App() {
+function App () {
+  const [searchTerm, setSearchTerm] = useState([]);
+
   return (
-    
-    <div style={{backgroundColor: 'antiquewhite'}}>
-      <h1>Top 10 James Bond Movies</h1>
-      <SearchBar />
-      <SearchResult />
 
+<div style={{ backgroundColor: 'antiquwhite' }}>
 
-       <h3>Oblig 4 | Vetle Enberg | UIN</h3>
-
-    </div>
-    
+  <h1>Topp James Bond Movies</h1>
+  <MovieCard setSearchTerm={setSearchTerm} />
+  <SearchhResults searchTerm={searchTerm} />
+  <h3>Oblig 4 | Vetle Enberg | UIN</h3>
+  
+  </div>
   );
 }
 
 export default App;
+
