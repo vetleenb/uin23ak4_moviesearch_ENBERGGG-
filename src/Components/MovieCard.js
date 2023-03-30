@@ -22,7 +22,7 @@ export const MovieCard = ({setSearchTerm}) => {
 
     return (
         <div style={{ display: "flex", justifyContent: "center" }}>
-            <input type="text" placeholder='Søk...' value={input} onChange={(e) => handleChange(e.target.value)}/>
+            <input type="text" placeholder='Søk...' value={input} onChange={(e) => Change(e.target.value)}/>
         </div>
     )
 };
