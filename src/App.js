@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import MovieCard from './Components/MovieCard';
 import SearchhResults  from './Components/SearchhResults';
+//Søkebar fungerte med filtrering før jeg innførte API, som gjør at den nå ikke fungerer som den skal. 
 
 
 function App () {
